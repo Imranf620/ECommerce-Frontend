@@ -1,1 +1,2 @@
-# ECommerce-Frontend
+# Ecommerce
+MERN Stack Project
