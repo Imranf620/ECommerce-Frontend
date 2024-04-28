@@ -12,30 +12,35 @@ import Feature from "../../Components/Feature/Feature";
 import BestSellingProducts from "../../Components/BestSellingProducts/BestSellingProducts";
 import { useDispatch, useSelector } from 'react-redux';
 import { getproduct } from '../../store/actions/authActions';
+import { getbrand } from '../../store/actions/authActions';
+import { getcategory } from '../../store/actions/authActions';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { isLoading, error, data } = useSelector(state => state.products);
+  const { data } = useSelector(state => state.products);
+  const { brand } = useSelector(state => state.brand);
+  const category = useSelector(state => state.category);
   useEffect(() => {
     dispatch(getproduct());
-    if (error) {
-      throw Error(error.message)
-    }
+    dispatch(getbrand());
+    dispatch(getcategory());
   }, []);
-  console.log({ jsdkasjd: data })
+  console.log({ category })
+  console.log({ Product: data })
+  console.log({ brand })
   return (
     <div>
       <div>
         <Top />
         <Navbar />
-        <TopSec />
+        <TopSec category={category} />
       </div>
       <div>
         {data &&
           <Products products={data} />
         }
       </div>
-      { data && <BestSellingProducts products={data} />}
+      {data && <BestSellingProducts products={data} />}
       <ImageComp />
       <Categories />
       <ImagesSec />

@@ -14,9 +14,34 @@ export const GET_PRODUCT_SUCCESS = 'GET_PRODUCT_SUCCESS';
 export const GET_PRODUCT_FAILURE = 'GET_PRODUCT_FAILURE';
 
 // Get Product By Id Types
-export const GET_PRODUCT_ID_REQUEST = 'GET_PRODUCT_REQUEST';
-export const GET_PRODUCT_ID_SUCCESS = 'GET_PRODUCT_SUCCESS';
-export const GET_PRODUCT_ID_FAILURE = 'GET_PRODUCT_FAILURE';
+export const GET_PRODUCT_ID_REQUEST = 'GET_PRODUCT_ID_REQUEST';
+export const GET_PRODUCT_ID_SUCCESS = 'GET_PRODUCT_ID_SUCCESS';
+export const GET_PRODUCT_ID_FAILURE = 'GET_PRODUCT_ID_FAILURE';
+
+// Get category Types
+export const categoryREQUEST = 'categoryREQUEST';
+export const categorySUCCESS = 'categorySUCCESS';
+export const categoryFAILURE = 'categoryFAILURE';
+
+export const GET_BRAND_REQUEST = 'GET_BRAND_REQUEST';
+export const GET_BRAND_SUCCESS = 'GET_BRAND_SUCCESS';
+export const GET_BRAND_FAILURE = 'GET_BRAND_FAILURE';
+
+export const categoryRequest = () => ({
+  type: categoryREQUEST
+});
+
+export const categorySuccess = (userData) => ({
+  type: categorySUCCESS,
+  payload: userData
+});
+
+export const categoryFailure = (error) => ({
+  type: categoryFAILURE,
+  payload: error
+});
+
+
 
 
 
@@ -78,5 +103,17 @@ export const GET_PRODUCT_ID_Success = (product) => ({
 });
 export const GET_PRODUCT_ID_Failure = (error) => ({
   type: GET_PRODUCT_ID_FAILURE,
+  payload: error
+});
+
+export const GET_BRAND_Request = () => ({
+  type: GET_BRAND_REQUEST
+});
+export const GET_BRAND_Success = (product) => ({
+  type: GET_BRAND_SUCCESS,
+  payload: product
+});
+export const GET_BRAND_Failure = (error) => ({
+  type: GET_BRAND_FAILURE,
   payload: error
 });

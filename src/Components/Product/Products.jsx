@@ -90,8 +90,8 @@ const Products = ({ products }) => {
   return (
     <div className="px-10 mt-20">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
-        <div className="flex justify-center items-center gap-5 md:gap-11">
-          <div className="bg-red-600 w-5 h-5 rounded-full"></div>
+        <div className="">
+          <div className="bg-red-600 w-5 h-5"></div>
           <h1 className="text-black font-semibold text-3xl md:text-4xl overflow-y-hidden">
             Flash Sales
           </h1>
