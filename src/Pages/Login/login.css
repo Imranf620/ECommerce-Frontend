@@ -87,7 +87,8 @@
         color: white;
 }
 .login-Forgot{
- width: 30%;
+ min-width: 30%;
+ max-width: auto;
      height: 32px;
         margin: 8px 4px;
         outline: none;

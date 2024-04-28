@@ -10,9 +10,10 @@ import {
   faTv,
   faWalkieTalkie,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const Products = () => {
-  // Array of objects containing icon and text data
+const Products = ({ products }) => {
+
   const categoryData = [
     {
       icon: faMobile,
@@ -123,15 +124,16 @@ const Products = () => {
         className="mt-5 flex justify-start gap-14 overflow-x-auto custom-scrollbar"
         ref={containerRef}
       >
-        {categoryData.map((category, index) => (
+        {products.length > 0 && products.map((category, index) => (
           <>
             <div
-              key={index}
+              key={category._id}
               className=" bg-gray-200 relative flex flex-col ml-8 justify-center items-center min-w-60 min-h-60 gap-4 border-black border-[1px] px-10 py-5 rounded-xl"
             >
               <div className=" opacity-0 bg-transparent z-10 w-full h-full absolute hover:opacity-100 duration-500 ">
                 <div className="text-white absolute bottom-0  text-center font-bold text-sm py-3 bg-black w-full cursor-pointer">
                   Add to Cart
+                  <Link to={"/product/" + category._id}>{category.title}</Link>
                 </div>
               </div>
               <h1 className=" text-white absolute top-2 left-2 px-1 py-1  bg-red-600 rounded">
@@ -148,8 +150,9 @@ const Products = () => {
                   icon={faEye}
                 />
               </h1>
-              <FontAwesomeIcon className="w-10 h-10" icon={category.icon} />
-              <h1 className="font-semibold">{category.text}</h1>
+              {/* <FontAwesomeIcon className="w-10 h-10" icon={category.icon} /> */}
+              <h1 className="font-semibold"><Link to={"/product/" + category._id }>{category.title}</Link></h1>
+          
             </div>
           </>
         ))}

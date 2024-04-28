@@ -7,9 +7,9 @@ import {
   faEye,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const BestSellingProducts = () => {
-  // Sample data for product categories
+const BestSellingProducts = ({ products }) => {
   const categoryData = [
     {
       iconSrc: "https://source.unsplash.com/random",
@@ -115,7 +115,7 @@ const BestSellingProducts = () => {
         ref={containerRef}
         style={{ width: "100%", height: "auto" }}
       >
-        {categoryData.map((product, index) => (
+        {products.length > 0 && products.map((product, index) => (
           <div
             key={index}
             className="bg-gray-100 rounded-xl flex flex-col justify-between p-5 border min-w-[200px] relative"
@@ -134,28 +134,29 @@ const BestSellingProducts = () => {
                 />
               </div>
             </div>
-            
+
             <div className="w-full flex justify-center">
               <img
-                src={product.iconSrc}
-                alt={product.productName}
+                src={product.images.length > 0 ? "http://localhost:5000/public/" + product.images[0].url : "klsd"}
+                alt=""
                 className="w-40 h-40"
               />
             </div>
 
             <h3 className="text-black font-medium text-lg">
-              {product.productName}
+              <Link to={"/product/" + product._id}> {product.title}</Link>
             </h3>
-            
+
+
             <div className="flex items-center gap-2">
               <p className="text-red-500 text-base">{product.price}</p>
-              {product.removedPrice && (
+              {product.price && (
                 <p class="opacity-50 text-base line-through">
-                  {product.removedPrice}
+                  {product.price}
                 </p>
               )}
             </div>
-            
+
             <div className="flex items-center gap-2 text-sm">
               {[...Array(5)].map((_, i) => (
                 <FontAwesomeIcon
