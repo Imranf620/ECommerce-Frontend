@@ -10,6 +10,7 @@ import Profile from "./Pages/Profile/Profile";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 import SingleProduct from "./Pages/SigleProduct/SingleProduct";
+import Customization from "./Pages/Customization/Customization";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/product" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/custom" element={<Customization />} />
         <Route path="*" element={<NotFound />} />
 
       </Routes>
