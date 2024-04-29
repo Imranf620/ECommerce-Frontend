@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Parallax, Pagination, Navigation } from 'swiper/modules';
 const ImageSwapper = ({ imageUrl, onNext, onPrevious }) => {
   return (
     <div className="relative w-[70vw] md:[70vw]">
@@ -26,23 +30,13 @@ const ImageSwapper = ({ imageUrl, onNext, onPrevious }) => {
   );
 };
 
-const TopSec = () => {
+const TopSec = ({ category }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     "https://source.unsplash.com/random",
     "https://media.istockphoto.com/id/1432249453/photo/a-male-programmer-shows-a-female-colleague-a-coding-technique-the-codes-are-visible-on-the.webp?b=1&s=170667a&w=0&k=20&c=vEz9LXgvZNn8sHbVnPLTmnTtlqZtNKXQLg8xrbVc5rM=",
     "https://media.istockphoto.com/id/1536191188/photo/web-developers-using-a-computer-together-in-an-office.webp?b=1&s=170667a&w=0&k=20&c=12s792O3eRQUBbfts90cqJjCAnGkR_UZ_2s2LbBm6GM=",
-  ];
-
-  const fashionCategories = [
-    "Woman's Fashion",
-    "Men's Fashion",
-    "Kids' Fashion",
-    "Accessories",
-    "Shoes",
-    "Bags",
-    "Jewelry",
   ];
 
   const handleNext = () => {
@@ -60,16 +54,17 @@ const TopSec = () => {
       <hr className="mb-10 md:mb-0" />
       <div className="flex flex-col main md:flex-row ">
         <div className="hidden md:flex flex-col gap-8 px-16 w-[25vw] py-10 border-r-[1px] border-black mr-14 font-semibold ">
-          {fashionCategories.map((category, index) => (
+          {category.category && category.category.map((category, index) => (
             <h1
               key={index}
               className="text-nowrap flex justify-between hover:translate-x-6 duration-300 cursor-pointer"
             >
-              {category} <span>&gt;</span>
+              {category.title} <span>&gt;</span>
             </h1>
           ))}
         </div>
-        <div className="right flex justify-center items-center rounded">
+
+        <div className="right flex justify-center items-center">
           <ImageSwapper
             imageUrl={images[currentIndex]}
             onNext={handleNext}
