@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Parallax, Pagination, Navigation } from 'swiper/modules';
 const ImageSwapper = ({ imageUrl, onNext, onPrevious }) => {
   return (
     <div className="relative w-[70vw] md:[70vw]">
@@ -59,6 +63,7 @@ const TopSec = ({ category }) => {
             </h1>
           ))}
         </div>
+
         <div className="right flex justify-center items-center">
           <ImageSwapper
             imageUrl={images[currentIndex]}
