@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 import SingleProduct from "./Pages/SigleProduct/SingleProduct";
 import Customization from "./Pages/Customization/Customization";
+import ShoeCustomizer from "./Pages/Customizer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/product" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/custom" element={<Customization />} />
+        <Route path="customizer" element={<ShoeCustomizer />} />
         <Route path="*" element={<NotFound />} />
 
       </Routes>

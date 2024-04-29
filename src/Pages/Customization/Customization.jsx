@@ -15,6 +15,132 @@ const Customization = () => {
   const [color, setColor] = useState("red");
   const [tab, setTab] = useState("fabric");
 
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value); // update the state with the new input value
+  };
+
+  const svg1 = (
+    <svg
+      className=" w-1/2 "
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 451.47 136.35"
+    >
+      <defs>
+        <style>{` .cls-1{fill:yellow;}.cls-1,.cls-2{stroke:#1d1d1b;stroke-miterlimit:10;}.cls-2{fill:yellow;}`}</style>
+      </defs>
+      <path
+        class="cls-1"
+        d="M90.24,285.3s10.93-18,19.28,0c0,0,6.43,48.86,42.43,49.5,0,0,36.43,6.07,50.28-19.55,1-1.84,2-3.65,3.18-5.4l12.76-19.41s11.57-14.78,27-3.85l-14.79,9s-3.21,3.21,1.29,7.71l-22.06,24a61.14,61.14,0,0,1-22.37,15.48c-12.28,4.87-30.22,9.32-46.22,3,0,0-36.64-9-46.28-39.21Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M409.09,353.09s8.13.79,12.65,12.48a7.86,7.86,0,0,0,8.65,5.09c3.29-.62,6-2.67,3.78-8.38,0,0-2.9-11.41-16.4-10.76Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M370.52,335.19s14.13-6.23,23.57,6.48a39,39,0,0,0,3.84,4.55c2.72,2.67,6.85,7.92,3.45,12.69,0,0-3.78,5.67-13.32-7.74a55.56,55.56,0,0,0-7.25-8.36Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M344.81,319.05s14.46-1.68,23.78,13.47c0,0,13.83,18.62,0,19,0,0-3.85-1.69-4.71-4,0,0-10.29-20.58-17.79-19.5Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M272.17,285.94s8.9-3.24,15.5,6.43a14.92,14.92,0,0,0,1,1.35c1.39,1.62,5.4,7.39,4.69,19.36,0,0-7,11.71-10.57,0,0,0,1.57-10.64-2.61-14.6Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M304.73,314.81l6,12.28s4.46,5.06,8.18,1.16a6.36,6.36,0,0,0,1.35-6.28c-1.31-4.23-4.46-12.3-10.37-16.6-.89-.65-1.76-1.33-2.59-2.06a17.64,17.64,0,0,0-10-4,2.55,2.55,0,0,0-2.72,1.86c-.27,1.1,0,2.52,1.94,3.87A25,25,0,0,1,304.73,314.81Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M327,307s14.15.62,16.5,10.07l2.79,15.5s-.66,10.46-6,5.75a9.52,9.52,0,0,1-3-5.2c-.83-3.89-3.25-11.92-9.48-14.79,0,0-6.05-3.92-9.24-.77l-3-5.78A15.74,15.74,0,0,1,327,307Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M231.67,303.3s107.78,51,157.5,63.43l81,28.29-21-21-14.33-6.8s-9.52,10.8-14.1-3.85c0,0-5.07-8.81-11.65-9.28l-6.68-1s1.31,9.84-7.25,5.65L385.31,347S375,336.43,371.45,337c0,0,7.54,11.86-.93,14.31,0,0-4.93,2.37-11.25-11.8,0,0-12.27-15.85-13-9.51,0,0,.75,9-3.91,9.51,0,0-5.89-1.91-7.44-13.58,0,0-5.44-11.91-16.32-8.4,0,0,5.36,9.26-1,11.75,0,0-7.43,5.11-13.82-16.37,0,0-1.18-6.38-7.08-7.74,0,0-2.61-2.41-3.69-.76,0,0,2.92,8.76-3.58,13.08,0,0-5,3-6.63-4.39,0,0,1.89-10.9-2.61-14.6,0,0-6.63-.52-14.56,5.52,0,0-6,1.53-7.47-3.17a5.77,5.77,0,0,1,2.23-6.33l11.77-8.56s-14,12.06-27,.65c0,0-15.45,7.33-15.84,11.22C229.33,297.81,229.38,302.23,231.67,303.3Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M519.68,402.94s-7.09-24.21-27.66-26.35l-33-2-9.86-.59,21,21s8.08,14.13,5.43,17.35Z"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M490.36,409.21s3.24-17.6-9.27-22.55L449.17,374"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-1"
+        d="M506,405.86s4.42-16.41-12.08-21.34l-31.52-9.71"
+        transform="translate(-68.84 -276.8)"
+      />
+      <path
+        class="cls-2"
+        d="M90.24,285.3s-20.9,34-20.9,62l10.45-10.47s8.2-9.38,16.55,2.65c0,0,13.77,15.3,23.13,14.19,0,0,14.16.84,19.95-7.73,0,0-23.93-10.9-29.95-17.2C109.47,328.75,91.52,311.66,90.24,285.3Z"
+        transform="translate(-68.84 -276.8)"
+      />
+    </svg>
+  );
+
+  const svg2 = (
+    <svg
+    className="w-1/2"
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 407.66 119.5"
+    >
+      <defs>
+        <style>{`.cls-1{fill:${color};}.cls-1,.cls-2{stroke:#1d1d1b;stroke-miterlimit:10;}.cls-2{fill:none;}`}</style>
+      </defs>
+      <polygon
+        class="cls-1"
+        points="292.1 55.3 253.25 119 282.18 118.88 317.75 63.4 292.1 55.3"
+      />
+      <polygon
+        class="cls-1"
+        points="273.59 48.46 226.24 118.5 200.06 117.16 252.1 39.94 273.59 48.46"
+      />
+      <polygon
+        class="cls-1"
+        points="212.01 22.93 232.16 31.63 172.89 114.7 148.69 112.78 212.01 22.93"
+      />
+      <circle class="cls-2" cx="236.82" cy="43.28" r="1.36" />
+      <circle class="cls-2" cx="229.32" cy="52.92" r="1.36" />
+      <circle class="cls-2" cx="221.61" cy="64.92" r="1.36" />
+      <circle class="cls-2" cx="212.61" cy="79.22" r="1.36" />
+      <circle class="cls-2" cx="203.32" cy="92.34" r="1.36" />
+      <circle class="cls-2" cx="194.32" cy="106.49" r="1.36" />
+      <circle class="cls-2" cx="246.8" cy="109.49" r="1.36" />
+      <circle class="cls-2" cx="246.8" cy="109.49" r="1.36" />
+      <circle class="cls-2" cx="256.66" cy="96.31" r="1.36" />
+      <circle class="cls-2" cx="264.8" cy="83.24" r="1.36" />
+      <circle class="cls-2" cx="272.23" cy="70.18" r="1.36" />
+      <circle class="cls-2" cx="279.54" cy="58.79" r="1.36" />
+      <path
+        class="cls-2"
+        d="M270.42,289.86s123.2,57.92,178.92,70.9l59.58,20.81s7.66,10.7,5.44,17.35c0,0-34.33,6.95-80.31,8.09,0,0-102.56,2.47-132.13-1.09l-102.87-7.8-82.91-1.55-8,.5V333.86l8.36-7.82s7.71-13.31,18.64,0l14.14,12a26.23,26.23,0,0,0,21.22,0l7.71-5.54s23.6,10.76,55.19-6.46C233.36,326,259.48,305.29,270.42,289.86Z"
+        transform="translate(-107.6 -289.22)"
+      />
+    </svg>
+  );
+
+  const [currentSvg, setCurrentSvg] = useState(svg1);
+  const [currentSvg2, setCurrentSvg2] = useState(svg2);
+
   return (
     <div className="flex flex-col md:flex-row h-screen bg-gray-100 text-gray-800">
       {/* Left Sidebar */}
@@ -44,6 +170,17 @@ const Customization = () => {
         {tab === "style" ? (
           <div className="flex flex-col items-center">
             <h1 className="text-xl font-bold">Soals</h1>
+            <div className="flex justify-between items-center   ">
+              <div onClick={()=>setCurrentSvg("")}>
+
+              {currentSvg}
+              </div>
+          <div>
+
+              {currentSvg2}
+          </div>
+            </div>
+
             <div className="flex flex-wr ap justify-between items-center"></div>
           </div>
         ) : (
@@ -52,9 +189,15 @@ const Customization = () => {
         {tab === "accents" ? (
           <div className="flex flex-col items-center">
             <h1 className="text-xl font-bold">Accents</h1>
-            <div className="flex flex-wr ap justify-between items-center">
-              
+            <div>
+              <input
+                type="text"
+                value={inputValue}
+                placeholder="Enter text..."
+                onChange={handleInputChange} // when the input changes, update the state
+              />
             </div>
+            <div className="flex flex-wrap justify-between items-center"></div>
           </div>
         ) : (
           ""
@@ -92,7 +235,6 @@ const Customization = () => {
                 <div className="flex justify-between text-xs font-semibold">
                   <span>Poppin</span>
                   <span>$69</span>
-                  
                 </div>
                 <span className="text-xs text-gray-600">
                   Cotton . Year Around
@@ -148,10 +290,73 @@ const Customization = () => {
 
           {/* Centered SVG */}
           <div className="flex justify-center flex-1">
-            <div className=" w-[70vw] h-[70vh] md:w-[30vw]  md:h-1/2 flex justify-center items-center text-center mr-10">
+            <div className=" relative w-[70vw] h-[70vh] md:w-[30vw]  md:h-1/2 flex justify-center items-center text-center mr-10">
+              <div>
+                <div className="w-72 relative h-40 ">
+                  <div className="absolute top-0 w-[40vw] left-0">{currentSvg}</div>
+                  <div className="relative  w-[40vw] top-[12px] -left-[1px]">
+                    {currentSvg2 }
+                    {/* <svg
+                      id="Layer_1"
+                      data-name="Layer 1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 407.66 119.5"
+                    >
+                      <defs>
+                        <style>{`.cls-1{fill:#1d1d1b;}.cls-1,.cls-2{stroke:#1d1d1b;stroke-miterlimit:10;}.cls-2{fill:none;}`}</style>
+                      </defs>
+                      <polygon
+                        class="cls-1"
+                        points="292.1 55.3 253.25 119 282.18 118.88 317.75 63.4 292.1 55.3"
+                      />
+                      <polygon
+                        class="cls-1"
+                        points="273.59 48.46 226.24 118.5 200.06 117.16 252.1 39.94 273.59 48.46"
+                      />
+                      <polygon
+                        class="cls-1"
+                        points="212.01 22.93 232.16 31.63 172.89 114.7 148.69 112.78 212.01 22.93"
+                      />
+                      <circle class="cls-2" cx="236.82" cy="43.28" r="1.36" />
+                      <circle class="cls-2" cx="229.32" cy="52.92" r="1.36" />
+                      <circle class="cls-2" cx="221.61" cy="64.92" r="1.36" />
+                      <circle class="cls-2" cx="212.61" cy="79.22" r="1.36" />
+                      <circle class="cls-2" cx="203.32" cy="92.34" r="1.36" />
+                      <circle class="cls-2" cx="194.32" cy="106.49" r="1.36" />
+                      <circle class="cls-2" cx="246.8" cy="109.49" r="1.36" />
+                      <circle class="cls-2" cx="246.8" cy="109.49" r="1.36" />
+                      <circle class="cls-2" cx="256.66" cy="96.31" r="1.36" />
+                      <circle class="cls-2" cx="264.8" cy="83.24" r="1.36" />
+                      <circle class="cls-2" cx="272.23" cy="70.18" r="1.36" />
+                      <circle class="cls-2" cx="279.54" cy="58.79" r="1.36" />
+                      <path
+                        class="cls-2"
+                        d="M270.42,289.86s123.2,57.92,178.92,70.9l59.58,20.81s7.66,10.7,5.44,17.35c0,0-34.33,6.95-80.31,8.09,0,0-102.56,2.47-132.13-1.09l-102.87-7.8-82.91-1.55-8,.5V333.86l8.36-7.82s7.71-13.31,18.64,0l14.14,12a26.23,26.23,0,0,0,21.22,0l7.71-5.54s23.6,10.76,55.19-6.46C233.36,326,259.48,305.29,270.42,289.86Z"
+                        transform="translate(-107.6 -289.22)"
+                      />
+                    </svg> */}
+                  </div>
 
-            
-          <svg
+                  {/* <svg
+                    id="Layer_1"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 453.03 56.38"
+                  >
+                    <defs>
+                      <style>{`.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;}`}</style>
+                    </defs>
+                    <path
+                      class="cls-1"
+                      d="M69,432.38l279.89,3.18c2.47,0,4.92-.05,7.38-.22,18.79-1.3,102.59-7.48,130.38-16,3.24-1,6.55-1.74,9.86-2.48,4.53-1,11.35-5.5,10.92-23.64l0-12.86s-61.73,14.79-91.31,16.07c0,0-115.71,6.43-174.85-.64,0,0-136.06-9.92-175-8.61-1.92.07-5-.06-7-.09C57,387,56,388.79,55.5,401.53v17.35S53.58,432.21,69,432.38Z"
+                      transform="translate(-54.93 -379.68)"
+                    />
+                  </svg> */}
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+              {/* <svg
                 id="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -322,36 +527,61 @@ const Customization = () => {
                   transform="translate(-4.39 -242.98)"
                 />
                 <circle class="cls-1" cx="395.21" cy="67.39" r="5.77" />
-              </svg>
-          </div>
+              </svg> */}
+              <p className="absolute bottom-1 font-semibold -right-11">
+                <svg
+                  width="300"
+                  height="150"
+                  viewBox="0 0 300 150"
+                  className="  p-2  bg-transparent"
+                >
+                  {/* Define the path for the text */}
+                  <path
+                    id="curve"
+                    d="M 50,100 C 150,20 250,20 300,100"
+                    fill="transparent"
+                    stroke="none"
+                    strokeWidth="2"
+                  />
 
-          {/* Right-side Content */}
-          <div className="flex flex-col gap-4 text-right text-gray-700">
-            <div>
-              <h1 className="text-2xl font-bold uppercase">
-                Your Custom Shirt
-              </h1>
+                  {/* Place the text on the path */}
+                  <text fontSize="12" fill="black">
+                    <textPath href="#curve" startOffset="0%">
+                      {inputValue}
+                    </textPath>
+                  </text>
+                </svg>
+              </p>
             </div>
-            <div className="flex flex-col gap-2 text-gray-600">
-              <span className="text-xl">$49</span>
-              <span className="text-xs">VAT included</span>
-            </div>
-            <button className="px-6 py-2 text-lg text-white bg-yellow-600 rounded hover:bg-yellow-700 transition">
-              Next
-            </button>
-            <div className="flex flex-col items-center gap-2 text-gray-700">
-              <span className="text-sm">Order today, receive in 3 weeks.</span>
-              <div className="flex items-center gap-2">
-                <button class="w-8 h-8 border border-gray-300 rounded-full hover:bg-gray-200 transition">
-                  +
-                </button>
-                <span className="text-sm">ZOOM</span>
+
+            {/* Right-side Content */}
+            <div className="flex flex-col gap-4 text-right text-gray-700">
+              <div>
+                <h1 className="text-2xl font-bold uppercase">
+                  Your Custom Shirt
+                </h1>
+              </div>
+              <div className="flex flex-col gap-2 text-gray-600">
+                <span className="text-xl">$49</span>
+                <span className="text-xs">VAT included</span>
+              </div>
+              <button className="px-6 py-2 text-lg text-white bg-yellow-600 rounded hover:bg-yellow-700 transition">
+                Next
+              </button>
+              <div className="flex flex-col items-center gap-2 text-gray-700">
+                <span className="text-sm">
+                  Order today, receive in 3 weeks.
+                </span>
+                <div className="flex items-center gap-2">
+                  <button class="w-8 h-8 border border-gray-300 rounded-full hover:bg-gray-200 transition">
+                    +
+                  </button>
+                  <span className="text-sm">ZOOM</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-
       </div>
     </div>
   );
